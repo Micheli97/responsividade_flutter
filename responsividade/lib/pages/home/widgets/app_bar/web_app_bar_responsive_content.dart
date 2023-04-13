@@ -27,12 +27,32 @@ class WebAppBarResponsiveContent extends StatelessWidget {
                     const Expanded(
                         child: TextField(
                       decoration: InputDecoration(
-                          border: InputBorder.none, hintText: "Pesquisar"),
+                          border: InputBorder.none,
+                          hintText: "Pesquisar",
+                          isCollapsed: true),
                     ))
                   ],
                 ),
               ),
-            )
+            ),
+            if (constraints.maxWidth >= 400) ...[
+              const SizedBox(width: 32),
+              TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "Aprender",
+                    style: TextStyle(color: Colors.white),
+                  )),
+            ],
+            if (constraints.maxWidth >= 500) ...[
+              const SizedBox(width: 8),
+              TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "Flutter",
+                    style: TextStyle(color: Colors.white),
+                  )),
+            ]
           ],
         );
       }),

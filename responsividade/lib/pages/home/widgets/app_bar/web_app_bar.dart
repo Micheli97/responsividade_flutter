@@ -19,7 +19,6 @@ class WebAppBar extends StatelessWidget {
             icon: const Icon(Icons.shopping_cart),
           ),
           const SizedBox(width: 24),
-          Expanded(child: Container()),
           SizedBox(
             height: 38,
             child: OutlinedButton(
