@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsividade/pages/breakpoints.dart';
+import 'package:responsividade/pages/home/widgets/course_item.dart';
 
 class CoursesSection extends StatelessWidget {
   const CoursesSection({super.key});
@@ -18,9 +19,7 @@ class CoursesSection extends StatelessWidget {
             horizontal:
                 constraints.maxWidth >= BreakPoints.tabletBreakPoint ? 0 : 16),
         itemBuilder: (context, index) {
-          return Container(
-            color: Colors.red,
-          );
+          return const CourseItem();
         },
       );
     });
