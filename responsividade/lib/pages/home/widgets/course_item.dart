@@ -1,5 +1,5 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-
 
 class CourseItem extends StatelessWidget {
   const CourseItem({super.key});
@@ -14,10 +14,18 @@ class CourseItem extends StatelessWidget {
           fit: BoxFit.fitWidth,
         ),
         const SizedBox(height: 4),
-        const Text(
-          "Criação de Apps Android e iOS com Flutter",
-          style: TextStyle(
-              color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
+        Flexible(
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              return const AutoSizeText(
+                "Criação de Apps Android e iOS com Flutter",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold),
+              );
+            },
+          ),
         ),
         const Text(
           "Violetta Dumont",
