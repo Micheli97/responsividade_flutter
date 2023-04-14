@@ -19,6 +19,7 @@ class CourseItem extends StatelessWidget {
             builder: (context, constraints) {
               return const AutoSizeText(
                 "Criação de Apps Android e iOS com Flutter",
+                minFontSize: 3,
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 15,
