@@ -23,7 +23,8 @@ class ResponsiveMenuActions extends StatelessWidget {
         const SizedBox(width: 16),
         const CircleAvatar(
           radius: 16,
-          backgroundColor: Colors.pink,
+          backgroundImage: NetworkImage(
+              "https://codelabs.developers.google.com/static/codelabs/flutter-flame-game/img/afb0fd6677c2a621.png"),
         )
       ],
     );
