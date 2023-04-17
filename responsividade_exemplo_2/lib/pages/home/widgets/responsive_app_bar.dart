@@ -8,11 +8,11 @@ class ResponsiveAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: AppBar(
-        backgroundColor: Colors.black,
-        elevation: 1,
-        title: ConstrainedBox(
+    return AppBar(
+      backgroundColor: Colors.black,
+      elevation: 1,
+      title: Center(
+        child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 1000),
           child: Row(
             children: [
