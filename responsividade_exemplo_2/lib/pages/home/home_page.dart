@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsividade_exemplo_2/pages/home/widgets/responsive_app_bar.dart';
+import 'package:responsividade_exemplo_2/pages/home/widgets/right_panel.dart';
 
 import 'widgets/post_widget.dart';
 import 'widgets/stories_list.dart';
@@ -19,10 +20,18 @@ class HomePage extends StatelessWidget {
         alignment: Alignment.topCenter,
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 1000),
-          child: ListView(
-            children: const [
-              StoriesList(),
-              PostWidget(),
+          child: Row(
+            children: [
+              Expanded(
+                child: ListView(
+                  children: const [
+                    StoriesList(),
+                    PostWidget(),
+                    PostWidget(),
+                  ],
+                ),
+              ),
+              const RightPanel()
             ],
           ),
         ),
